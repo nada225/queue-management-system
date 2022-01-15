@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppings', sans-serif;
+}
+
+/* body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #ebf5fc;
+} */
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  flex-wrap: wrap;
+  padding: 5px 0;
+}
+
+.card-container .card {
+  position: relative;
+  min-width: 320px;
+  height: 440px;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.05),
+    inset -5px -5px 5px rgba(255, 255, 255, 0.05),
+    5px 5px 5px rgba(0, 0, 0, 0.5), -5px -5px 5px rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+  margin: 30px;
+  background: #f7f0e4;
+}
+
+.card-container .card .box,
+.card-container .wide-card .box {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  background: #f7f0e4;
+  /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); */
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+
+.card-container .card:hover .box {
+  transform: translateY(-50px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(45deg, #006f67, #013a70);
+  z-index: 1;
+}
+
+.card-container .card .box .content,
+.wide-card .box .content {
+  padding: 20px;
+  text-align: center;
+}
+
+.card-container .card .box .content .card-number {
+  position: absolute;
+  top: -10px;
+  right: 30px;
+  font-size: 8em;
+  color: rgba(0, 0, 0, 0.02);
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.card-container .card:hover .box .content .card-number {
+  color: rgba(0, 0, 0, 0.05);
+}
+
+.card-container .card .box .content .card-title,
+.wide-card .box .content .card-title {
+  font-size: 1.8em;
+  color: #006f67;
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.card-container .card .box .content .card-text,
+.wide-card .box .content .card-text {
+  font-size: 1em;
+  font-weight: 300;
+  color: #006f67;
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.card-container .card .box .content a {
+  font-size: 1em;
+  font-weight: 300;
+  color: #006f67;
+  z-index: 1;
+  transition: 0.5s;
+  text-decoration: none;
+}
+.card-container .card .box .content .btn-card {
+  border: #006f67 2px solid !important;
+}
+
+.card-container .card:hover .box .content .btn-card {
+  border: #f7f0e4 2px solid !important;
+}
+.card-container .card:hover .box .content a {
+  color: #f7f0e4;
+}
+.card-container .card:hover .box .content .card-title,
+.card-container .card:hover .box .content .card-text {
+  color: #f7f0e4;
+}
+
+.card-container .card .box .content .card-link {
+  position: relative;
+  display: inline-block;
+  padding: 8px 20px;
+  background: #16697a;
+  margin-top: 15px;
+  border-radius: 20px;
+  color: #f7f0e4;
+  text-decoration: none;
+  font-weight: 400;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-container .card:hover .box .content .card-link {
+  background: #ff568f;
+}
+
+.v-menu-btn {
+  position: absolute !important;
+  top: 0px !important;
+  right: -10px !important;
+}
+
+.v-menu-icon {
+  color: #006f67 !important;
+  font-size: 1.2em !important;
+}
+.card-container .card:hover .box .v-menu-icon {
+  color: #ffffff !important;
+}
+
+.wide-card {
+  position: relative;
+  min-width: 100%;
+  height: 140px;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.05),
+    inset -5px -5px 5px rgba(255, 255, 255, 0.05),
+    5px 5px 5px rgba(0, 0, 0, 0.5), -5px -5px 5px rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+  margin: 10px;
+  background: #f7f0e4;
+}
